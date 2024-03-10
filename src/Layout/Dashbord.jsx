@@ -11,57 +11,57 @@ const Dashbord = () => {
         <div className="flex">
             <div className=" w-64 min-h-screen bg-orange-400">
                 <ul className="menu">
-                  {
-                    isadmin? <>
-                    <li><NavLink to='/dashbord/adminHome'>
-                       <FaHome></FaHome>
-                       Admin Home
-                   </NavLink></li>
-                   <li><NavLink to='/dashbord/addItems'>
-                       <FaUtensils></FaUtensils>
-                       Add Items
-                   </NavLink></li>
-                   <li><NavLink to='/dashbord/manageItems'>
-                       <FaList></FaList>
-                       Manage Items
-                   </NavLink></li>
-                   <li><NavLink to='/dashbord/bookings'>
-                       <FaAd></FaAd>
-                       Manage Booking
-                   </NavLink></li>
-                   <li><NavLink to='/dashbord/users'>
-                       <FaUsers></FaUsers>
-                       All Users
-                   </NavLink></li>
-                   </> 
-                   : 
-                   <>
-                    <li><NavLink to='/dashbord/userHome'>
-                       <FaHome></FaHome>
-                       User home
-                   </NavLink></li>
-                   <li><NavLink to='/dashbord/reservation'>
-                       <FaCalendar></FaCalendar>
-                       Reservation
-                   </NavLink></li>
-                   <li><NavLink to='/dashbord/cart'>
-                       <FaShoppingCart></FaShoppingCart>
-                       My cart({cart.length})
-                   </NavLink></li>
-                   <li><NavLink to='/dashbord/review'>
-                       <FaAd></FaAd>
-                       Add a Review
-                   </NavLink></li>
-                   <li><NavLink to='/dashbord/bookings'>
-                       <FaList></FaList>
-                       My Bookings
-                   </NavLink></li>
-                   </>
-                  }
+                    {
+                        isadmin ? <>
+                            <li><NavLink to='/dashbord/adminHome'>
+                                <FaHome></FaHome>
+                                Admin Home
+                            </NavLink></li>
+                            <li><NavLink to='/dashbord/addItems'>
+                                <FaUtensils></FaUtensils>
+                                Add Items
+                            </NavLink></li>
+                            <li><NavLink to='/dashbord/manageItems'>
+                                <FaList></FaList>
+                                Manage Items
+                            </NavLink></li>
+                            <li><NavLink to='/dashbord/bookings'>
+                                <FaAd></FaAd>
+                                Manage Booking
+                            </NavLink></li>
+                            <li><NavLink to='/dashbord/users'>
+                                <FaUsers></FaUsers>
+                                All Users
+                            </NavLink></li>
+                        </>
+                            :
+                            <>
+                                <li><NavLink to='/dashbord/userHome'>
+                                    <FaHome></FaHome>
+                                    User home
+                                </NavLink></li>
+                                <li><NavLink to='/dashbord/history'>
+                                    <FaCalendar></FaCalendar>
+                                    History
+                                </NavLink></li>
+                                <li><NavLink to='/dashbord/cart'>
+                                    <FaShoppingCart></FaShoppingCart>
+                                    My cart({cart.length})
+                                </NavLink></li>
+                                <li><NavLink to='/dashbord/review'>
+                                    <FaAd></FaAd>
+                                    Add a Review
+                                </NavLink></li>
+                                <li><NavLink to='/dashbord/paymentHistory'>
+                                    <FaList></FaList>
+                                   Real Payment History
+                                </NavLink></li>
+                            </>
+                    }
 
                     <div className="divider">OR</div>
                     {/* shared nav link */}
-                    
+
                     <li><NavLink to='/'>
                         <FaHome></FaHome>
                         Home
