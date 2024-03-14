@@ -46,14 +46,15 @@ const AuthProvider = ({ children }) => {
                 .then(res =>{
                     if(res.data.token){
                         localStorage.setItem('access-token', res.data.token)
+                        setLoding(false);
                     }
                 })
             }
             else{
                 // to do : remove token (if stored in client side,cookies, local storage, caching, in mamory)
                 localStorage.removeItem('access-token');
+                setLoding(false);
             }
-            setLoding(false);
         })
         return () => {
             unSubscribe();
